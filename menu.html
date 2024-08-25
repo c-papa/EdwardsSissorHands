@@ -1,9 +1,9 @@
 <div class="dropdown">
   <button class="dropbtn"><i class="fa fa-bars" aria-hidden="true"></i></button>
-  <div class="dropdown-content">
-    <a onClick="document.getElementById('about-title').scrollIntoView({ behavior: 'smooth', block: 'start' });">About</a>
-    <a onClick="document.getElementById('gal-title').scrollIntoView({ behavior: 'smooth', block: 'start' });">Image Gallery</a>
-    <a onClick="document.getElementById('price-title').scrollIntoView({ behavior: 'smooth', block: 'start' });">Price list</a>
+  <div id="dropdown-content" class="dropdown-content">
+    <a onClick="document.getElementById('about-title').scrollIntoView({ behavior: 'smooth', block: 'start' });document.getElementById('dropdown-content').style.display = 'none';">About</a>
+    <a onClick="document.getElementById('gal-title').scrollIntoView({ behavior: 'smooth', block: 'start' });document.getElementById('dropdown-content').style.display = 'none';">Image Gallery</a>
+    <a onClick="document.getElementById('price-title').scrollIntoView({ behavior: 'smooth', block: 'start' });document.getElementById('dropdown-content').style.display = 'none';">Price list</a>
   </div>
 </div>
 
