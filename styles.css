@@ -242,15 +242,15 @@ html {
   background-color: #ddd;
 }
 
-.dropdown:hover .dropdown-content {
+/* .dropdown:hover .dropdown-content {
   display: block;
-}
+} */
 
-.dropdown:hover .dropbtn {
+/* .dropdown:hover .dropbtn {
   background-color: #383838;
   color: white !important;
   transition: 0.5s;
-}
+} */
 .flex-container {
   position: fixed;
   justify-content: center;
