@@ -1,4 +1,4 @@
-fetch("menu.html")
+fetch("https://c-papa.github.io/EdwardsSissorHands/menu.html")
   .then((response) => response.text())
   .then((data) => {
     const tempDiv = document.createElement("div");
@@ -14,7 +14,58 @@ const createElement = (element, attributes) => {
   return input;
 };
 
-fetch("price_list.json")
+fetch("about.json")
+  .then((response) => response.json())
+  .then((data) => {
+    data.forEach((element) => {
+      const div1 = createElement("div", { class: "column" });
+      const div2 = createElement("div", { class: "card" });
+      const img = createElement("img", {
+        src: `https://c-papa.github.io/EdwardsSissorHands/images/${element.img}`,
+        style: "width:100%",
+        loading: "lazy",
+        alt: `${element.name}`,
+      });
+      const div3 = createElement("div", { class: "container" });
+      const h1 = createElement("h1", {});
+      h1.innerText = element.name;
+
+      const p1 = createElement("p", { class: "title" });
+      p1.innerText = element.jobTitle;
+
+      const p2 = createElement("p", {});
+      p2.innerText = element.desc;
+
+      const p3 = createElement("p", {});
+      p3.innerText = element.email;
+
+      const p4 = createElement("p", {});
+
+      const button = createElement("button", { class: "button" });
+      button.innerText = "Contact";
+      button.addEventListener("click", function () {
+        window.location.href = `tel:${element.tel}`;
+      });
+
+      p4.appendChild(button);
+      div3.appendChild(h1);
+      div3.appendChild(p1);
+      div3.appendChild(p2);
+      div3.appendChild(p3);
+      div3.appendChild(p4);
+
+      div2.appendChild(img);
+      div2.appendChild(div3);
+      div1.appendChild(div2);
+
+      document.getElementById("profile-container").appendChild(div1);
+    });
+  })
+  .catch((error) => {
+    console.error("Error fetching the JSON:", error);
+  });
+
+fetch("https://c-papa.github.io/EdwardsSissorHands/price_list.json")
   .then((response) => response.json())
   .then((data) => {
     data.forEach((element) => {
@@ -36,7 +87,7 @@ fetch("price_list.json")
     console.error("Error fetching the JSON:", error);
   });
 
-fetch("image_gallery.json")
+fetch("https://c-papa.github.io/EdwardsSissorHands/image_gallery.json")
   .then((response) => response.json()) // Convert the response to JSON
   .then((data) => {
     const img_gal = document.getElementById("img-gal");
@@ -50,7 +101,7 @@ fetch("image_gallery.json")
       batch.forEach((element) => {
         const div1 = createElement("div", { class: "gal-column" });
         const img = createElement("img", {
-          src: `/images/${element.img}`,
+          src: `https://c-papa.github.io/EdwardsSissorHands/images/${element.img}`,
           style: "width:100%",
           loading: "lazy",
         });
