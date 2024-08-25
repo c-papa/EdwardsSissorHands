@@ -238,7 +238,7 @@ html {
   text-align: left;
   display: block;
 }
-.dropdown-content a:hover {
+.dropdown-content a:focus {
   background-color: #ddd;
 }
 
