@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Adult haircut",
+    "value": 25,
+    "desc": "Description of the service provided Description of the service provided"
+  },
+  {
+    "title": "Kids haircut",
+    "value": 20,
+    "desc": "Description of the service provided"
+  },
+  {
+    "title": "Razor cut",
+    "value": 4,
+    "desc": "Description of the service provided"
+  },
+  {
+    "title": "Shave",
+    "value": 15,
+    "desc": "Description of the service provided"
+  },
+  {
+    "title": "Shampoo",
+    "value": 10,
+    "desc": "Description of the service provided"
+  },
+  {
+    "title": "Face mask",
+    "value": 5,
+    "desc": "Description of the service provided"
+  },
+  {
+    "title": "Head & neck massage",
+    "value": 25,
+    "desc": "Description of the service provided"
+  }
+]
