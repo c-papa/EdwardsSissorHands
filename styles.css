@@ -59,6 +59,7 @@ html {
   padding-bottom: 15px;
 }
 .about-section h1 {
+  text-align: right;
   flex: 1;
   margin: 13px 20px 20px 20px;
   font-size: 30px;
